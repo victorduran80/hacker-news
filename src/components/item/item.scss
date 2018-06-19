@@ -1,0 +1,11 @@
+item {
+    .title {
+        font-size: 1.8rem;
+        }
+    .link {
+        font-size: 1.2rem;
+        }        
+    div > span:not(:last-child) {
+        padding-right: 1rem;
+        }
+}

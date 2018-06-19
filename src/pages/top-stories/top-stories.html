@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>Top Stories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <span class="buttons">
+        <button ion-button icon-left color="light" [disabled]="!hasPrevious()"
+        (click)="previous()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Prev
+        </button>
+        <button ion-button [disabled]="!canRefresh()" (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+        </button>
+        <button ion-button icon-right color="light" [disabled]="!hasNext()"
+        (click)="next()">
+        <ion-icon name="arrow-forward"></ion-icon>
+        Next
+        </button>
+        
+        </span>
+
+  <items *ngIf="items" [items]="items"></items>
+  <!--
+  <ion-list>
+    <ion-item *ngFor="let it of its | async">
+      <p>item</p>
+    </ion-item>
+  </ion-list>
+-->
+</ion-content>
